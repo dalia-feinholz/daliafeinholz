@@ -1,0 +1,45 @@
+// =======================
+// Typography
+// =======================
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400|Source+Sans+Pro:200,300,400|Work+Sans:200,300,400|Quicksand:200,300,400');
+
+.source {
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+.raleway {
+	font-family: 'Raleway', sans-serif;
+}
+
+.work {
+	font-family: 'Work Sans', sans-serif;
+}
+
+.quicksand {
+	font-family: 'Quicksand', sans-serif;
+}
+
+.headline {
+	font-size: 40px;
+	line-height: 1.5;
+	font-weight: 300;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+}
+
+.subheadline {
+	font-size: 20px;
+	line-height: 1.4;
+	font-weight: 300;
+
+	&.work {
+		font-size: 18px;
+	}
+}
+
+.footer {
+	font-weight: 300;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
