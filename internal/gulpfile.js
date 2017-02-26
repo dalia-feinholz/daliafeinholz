@@ -1,6 +1,7 @@
 'use strict'
 
 var gulp = require('gulp');
+var autoprefixer = require('gulp-autoprefixer');
 var plugins = require('gulp-load-plugins')();
 
 var Task = {
@@ -16,9 +17,6 @@ var paths = {
 	js: {
 		source: ['./src/js/*.js', './src/js/**/*.js'],
 		destination: '../dist/scripts/'
-	},
-	modules: {
-		// bootsrap: ['node_modules/bootstrap-sass/assets/stylesheets']
 	}
 };
 
@@ -28,7 +26,9 @@ gulp.task(Task.buildStyles, function() {
 		.pipe(plugins.plumber())
 		.pipe(plugins.sass({
 			outputStyle: 'compressed'
-			// includePaths: paths.modules.bootsrap
+		}))
+		.pipe(autoprefixer({
+			cascade: false
 		}))
 		.on('error', plugins.sass.logError)
 		.pipe(plugins.rename('home.built.css'))

@@ -1,0 +1,23 @@
+// =======================
+// Icon font
+// =======================
+
+.icon {
+	font-family: 'DF Icons';
+	font-size: 14px;
+	font-weight: normal;
+
+	&.icon-email:before { content: '\e900'; }
+	&.icon-instagram:before { content: '\e902'; }
+	&.icon-facebook:before { content: '\e901'; }
+	&.icon-linkedin:before { content: '\e903'; }
+}
+
+@font-face {
+	font-family: 'DF Icons';
+	src: url('http://daliafeinholz.com/prototype/assets/fonts/icons.eot'); /* IE9 Compat Modes */
+	src: url('http://daliafeinholz.com/prototype/assets/fonts/icons.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('http://daliafeinholz.com/prototype/assets/fonts/icons.woff') format('woff'), /* Pretty Modern Browsers */
+		 url('http://daliafeinholz.com/prototype/assets/fonts/icons.ttf')  format('truetype'), /* Safari, Android, iOS */
+		 url('http://daliafeinholz.com/prototype/assets/fonts/icons.svg#icons') format('svg'); /* Legacy iOS */
+}

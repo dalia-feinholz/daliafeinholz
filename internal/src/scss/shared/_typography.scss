@@ -2,25 +2,24 @@
 // Typography
 // =======================
 
-@import url('https://fonts.googleapis.com/css?family=Raleway:300,400|Source+Sans+Pro:200,300,400|Work+Sans:200,300,400|Quicksand:200,300,400');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400|Work+Sans:200,300,400');
 
-.source {
-	font-family: 'Source Sans Pro', sans-serif;
+$font-sans-serif: Helvetica, 'Helvetica Neue', Arial, sans-serif;
+
+@mixin font-source {
+	font-family: 'Source Sans Pro', $font-sans-serif;
 }
 
-.raleway {
-	font-family: 'Raleway', sans-serif;
+@mixin font-work {
+	font-family: 'Work Sans', $font-sans-serif;
 }
 
-.work {
-	font-family: 'Work Sans', sans-serif;
-}
-
-.quicksand {
-	font-family: 'Quicksand', sans-serif;
+.body {
+	-webkit-font-smoothing: antialiased;
 }
 
 .headline {
+	@include font-work;
 	font-size: 40px;
 	line-height: 1.5;
 	font-weight: 300;
@@ -29,6 +28,7 @@
 }
 
 .subheadline {
+	@include font-source;
 	font-size: 20px;
 	line-height: 1.4;
 	font-weight: 300;
@@ -39,7 +39,20 @@
 }
 
 .footer {
+	@include font-work;
+	font-size: 12px;
 	font-weight: 300;
 	letter-spacing: 1px;
 	text-transform: uppercase;
+}
+
+a {
+	&,
+	&:link,
+	a:visited,
+	a:hover,
+	a:active {
+		text-decoration: none;
+	}
+
 }
