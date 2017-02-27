@@ -7,7 +7,6 @@ var Home =  window.Home || (function() {
 		initialize: function() {
 			window.onload = function() {
 				document.documentElement.className += " loaded";
-				console.log("loaded!");
 			}
 		},
 
