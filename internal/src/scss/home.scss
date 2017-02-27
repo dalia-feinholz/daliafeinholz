@@ -114,6 +114,12 @@ $content-max-width: 506px;
 		list-style-type: none;
 		text-align: center;
 
+		@media only screen and (max-width: $content-max-width) {
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+
 		a {
 			position: relative;
 			display: block;
