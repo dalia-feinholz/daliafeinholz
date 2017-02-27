@@ -1,0 +1,21 @@
+// =======================
+// CSS3 Transitions
+// =======================
+
+.body,
+.headline,
+.subheadline,
+.logos {
+	opacity: 0;
+	transition-property: opacity;
+	transition-duration: 1.5s;
+
+	.loaded & {
+		opacity: 1;
+	}
+}
+
+.body        { transition-delay:   0s; }
+.headline    { transition-delay: 0.5s; }
+.subheadline { transition-delay: 1.0s; }
+.logos       { transition-delay: 1.5s; }
