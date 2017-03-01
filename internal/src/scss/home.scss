@@ -4,10 +4,6 @@
 
 @import "shared/core";
 
-$min-height: 500px;
-$main-max-width: 590px;
-$content-max-width: 506px;
-
 .body {
 	position: relative;
 	width: 100%;
@@ -51,12 +47,21 @@ $content-max-width: 506px;
 .headline {
 	span {
 		display: block;
+
+		@media only screen and (max-width: $content-max-width) {
+			display: inline;
+		}
 	}
 
 	&:after {
 		@include divider;
 		margin-top: 26px;
 		margin-bottom: 32px;
+
+		@media only screen and (max-width: $content-max-width) {
+			margin-top: 12px;
+			margin-bottom: 20px;
+		}
 	}
 }
 
@@ -67,16 +72,12 @@ $content-max-width: 506px;
 
 	@media only screen and (max-width: $content-max-width) {
 		margin-left: 0;
+		padding-bottom: 14px;
 	}
 
 	ul li {
 		display: inline-block;
 		list-style-type: none;
-
-		@media only screen and (max-width: $content-max-width) {
-			display: block;
-			text-transform: capitalize
-		}
 
 		&:before {
 			content: '\2022';
@@ -88,18 +89,21 @@ $content-max-width: 506px;
 			font-size: 14px;
 
 			@media only screen and (max-width: $content-max-width) {
-				padding-right: 8px;
-				padding-left: 0;
+				display: none;
 			}
 		}
 
 		&:first-child {
 			&:before {
 				display: none;
+			}
+		}
 
-				@media only screen and (max-width: $content-max-width) {
-					display: inline-block;
-				}
+		span {
+			display: none;
+
+			@media only screen and (max-width: $content-max-width) {
+				display: inline-block;
 			}
 		}
 	}

@@ -2,6 +2,10 @@
 // Utilities
 // =======================
 
+$min-height: 500px;
+$main-max-width: 590px;
+$content-max-width: 506px;
+
 .visually-hidden {
 	display: none;
 }
@@ -20,6 +24,6 @@
 
 	@media only screen and (max-width: $content-max-width) {
 		margin-left: 0;
+		width: 100%;
 	}
-
 }

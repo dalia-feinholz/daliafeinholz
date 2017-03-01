@@ -25,6 +25,12 @@ $font-sans-serif: Helvetica, 'Helvetica Neue', Arial, sans-serif;
 	font-weight: 300;
 	text-transform: uppercase;
 	letter-spacing: 5px;
+
+	@media only screen and (max-width: $content-max-width) {
+		font-size: 30px;
+		line-height: 1.2;
+		letter-spacing: 4px;
+	}
 }
 
 .subheadline {
@@ -32,9 +38,13 @@ $font-sans-serif: Helvetica, 'Helvetica Neue', Arial, sans-serif;
 	font-size: 20px;
 	line-height: 1.4;
 	font-weight: 300;
+}
 
-	&.work {
-		font-size: 18px;
+p {
+	&.subheadline {
+		@media only screen and (max-width: $content-max-width) {
+			font-size: 16px;
+		}
 	}
 }
 
